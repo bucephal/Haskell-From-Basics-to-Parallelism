@@ -7,10 +7,10 @@ Class types will follow, which will bring the important notions of functors, app
 
 Finally, we will look at parallelism in Haskell. We hope to evaluate Haskell's promises of purity by how easy it is to parallelize programming. To this end, several experiments will be conducted.
 
-To learn Haskell basic principles, we'll follow these textbooks:
+We'll use the following textbooks:
 
-Programming Haskell, 2nd ed. Graham Hutton, Cambridge University Press, 2016.
+_Programming Haskell_, 2nd ed. Graham Hutton, Cambridge University Press, 2016.
 
-Get Programming with Haskell, Will Kurt, Manning, 2018
+_Get Programming with Haskell_, Will Kurt, Manning, 2018
 
-Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming, Simon Marlow, O'Reilly, 2013
+_Parallel and Concurrent Programming in Haskell_: Techniques for Multicore and Multithreaded Programming, Simon Marlow, O'Reilly, 2013
