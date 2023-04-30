@@ -17,4 +17,8 @@ Here's an example of a function definition in Haskell.
 
 ```haskell
 f x = x * x
+f 4
+16
 ```
+
+Functions in Haskell can only be defined and nothing else can be said about them. You simply define it, i.e. give it a meaning, nothing more. What steps the computer actually takes to calculate the result according to its parameters is not our concern. We only care about what it means to be the function (say) _f_, and this meaning is nothing but what should be the output for all its possible inputs.
