@@ -1,7 +1,7 @@
 
 ---
-date: 2023-04-30
-Categories: Haskell Functional-Programming Haskell-learning Monad Parallelism
+--- date: 2023-04-30
+--- Categories: Haskell Functional-Programming Haskell-learning Monad Parallelism
 ---
 
 _Learning Haskell: Languaage basic, Type system, Class Types, From functor to Monad, Parallelism for free._
