@@ -1,9 +1,4 @@
 
----
---- date: 2023-04-30
---- Categories: Haskell Functional-Programming Haskell-learning Monad Parallelism
----
-
 _Learning Haskell: Languaage basic, Type system, Class Types, From functor to Monad, Parallelism for free._
 
 This blog begins with an introduction to the basic features of Haskell FP, from recursivity and laziness to the type system. 
