@@ -25,6 +25,6 @@ Functions in Haskell can only be defined and nothing else can be said about them
 
 If this property of referential transparency is respected all the way throughout the language then the language is said to be **_pure_**. You might wonder what the point of having a real pure language is, since it rules out any form of I/O. As a matter of fact I/O can't guarantee the same result all the time. So it would seem that a pure FP (Functional Programming) language is useless. No matter how smart it may be inside, if you can't communicate with it... no one really knows.
 
-This is a problem we'll see later. 
+Have no fear, this problem has been taken care of. But we won't be able to talk about it until we see those (in)famous **_monads_**. 
 
-According to Simon Peyton-Jones, the main person behind Haskell, the language is indeed useless. The more pure it is, the less useful it will be. The first versions of Haskell had no form of I/O, but after a while it became embarrassing... 
+According to Simon Peyton-Jones, the main person behind Haskell, the language is actually useless. The more pure it is, the less useful it will be. The first versions of Haskell had no form of I/O, but after a while it became embarrassing... 
