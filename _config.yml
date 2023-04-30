@@ -1,3 +1,5 @@
 theme: minima
 title: Programming in Haskell
-author: Francis Uldéric Girard
+author: 
+  name: Francis Uldéric Girard
+  email: francis.girard07@gmail.com
