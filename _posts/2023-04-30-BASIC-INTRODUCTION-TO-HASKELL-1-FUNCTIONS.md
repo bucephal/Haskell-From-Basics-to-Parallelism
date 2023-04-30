@@ -2,7 +2,7 @@
 layout: post
 title: "Basic Introduction to Haskell 1. Functions"
 date: 2023-04-30
-Categories: Haskell Functional-Programming
+Categories: Haskell Functional-Programming referential-transparency declarative-language imperative-language
 ---
 ![Haskell logo](/docs/assets/images/Function_machine2.svg)
 
