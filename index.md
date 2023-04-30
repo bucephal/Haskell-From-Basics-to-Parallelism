@@ -1,7 +1,17 @@
 
+---
+layout: post
+title: "Basic Introduction to Haskell"
+date: 2023-04-30
+Categories: Haskell Functional-Programming
+Categories: Haskell Functional-Programming Haskell-learning
+---
+
 _Learning Haskell: Languaage basic, Type system, Class Types, From functor to Monad, Parallelism for free._
 
-This blog will introduce Haskell from FP basic features to recursivity, laziness, and type system. From the type system we'll introduce class types, which will allow us to cover the very important types from functors and applicatives to monads, i.e. contexts with a state. We can then tackle parallelism and determine how easy and automatic it should be with the purity of Haskell. We'll determine whether the promises of purity are met by how easy it is to parallelize the programming. To this end, a number of experiments will be carried out.
+This blog introducse Haskell from FP basic features from recursivity, to laziness, and type system. 
+
+Class types will follow. This will allow us to begin with the introduction of the very important functors, applicatives and monads. We'll see how Haskell uses them to cleanly separate pure FP from stateful contexts and IO. Finally, we will look at parallelism in Haskell. We hope to evaluate Haskell's promises of purity by how easy it is to parallelize programming. To this end, several experiments will be conducted.
 
 To learn Haskell basic principles, we'll follow these textbooks:
 
