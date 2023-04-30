@@ -1,4 +1,6 @@
 
+![Haskell logo](/docs/assets/images/haskell.svg)
+
 _Learning Haskell: Language basic, Type system, Class Types, From functor to Monad, Parallelism for free._
 
 This blog begins with an introduction to the basic features of Haskell FP, from recursivity and laziness to the type system. 
