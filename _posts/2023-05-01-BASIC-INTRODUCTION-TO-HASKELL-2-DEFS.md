@@ -9,10 +9,18 @@ Categories: Haskell Functional-Programming referential-transparency declarative-
 
 >“The question is,” said Alice, “whether you can make words mean so many different things.”
 >
->“The question is,” said Humpty Dumpty, “which is to be master — that’s all.’’
+>“The question is,” said Humpty Dumpty, “which is to be master — that’s all.”
 >
 >_Through the Looking Glass_, Lewis Carroll
 
 # Syntax for Defining Functions
 
-Hello.
+The identity function may be the simplest one. It taskes an “x” and simply returns that “x”.
+
+```haskell
+identity x = x
+identity "hello"
+"hello"
+```
+
+The name of a function like "identity" must start with a lower case letter. Then comes its parameters' list followed by an "=" and an expression for its value or result. 
