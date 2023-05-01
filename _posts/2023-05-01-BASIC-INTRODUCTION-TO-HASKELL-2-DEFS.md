@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Basic Introduction to Haskell 2. Defining Functions"
-date: 2023-04-30
+date: 2023-05-01
 Categories: Haskell Functional-Programming referential-transparency declarative-language imperative-language pure-functional-language
 ---
 
