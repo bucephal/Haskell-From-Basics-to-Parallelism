@@ -117,4 +117,4 @@ In the previous example, we can see that the "id" of the variable underneath its
 >>>
 ```
 
-Variables are immutable in Python in the sense that you can't modify the area of memory ("outside the language") where their values are set, not in the sense that you can't change its definition.
+Variables are immutable in Python in the sense that you can't modify the area of memory where their values are set, not in the sense that you can't change its definition.
