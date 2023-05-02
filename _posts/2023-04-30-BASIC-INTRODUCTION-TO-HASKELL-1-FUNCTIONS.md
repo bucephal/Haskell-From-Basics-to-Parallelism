@@ -29,7 +29,7 @@ Have no fear, this problem has been taken care of. But we won't be able to expla
 
 According to Simon Peyton-Jones, the main person behind Haskell, the language is actually useless. The more pure it is, the less useful it will be. The first versions of Haskell had no form of I/O, but after a while it became embarrassing... 
 
-# The Order of Evaluation is Irrelevant
+## Order of Evaluation is Irrelevant
 
 A function in Haskell is defined in such a way that their order of evaluation is immaterial. That means that no matter in what order the expressions are evaluated, the result will be the same.
 This property of functions in Haskell comes from their purity. Most imperative languages can't insure this. For example, in _C_:
@@ -84,6 +84,37 @@ n * (n+1)
 -- And the result of the above expression is 2.
 ```
 
-In Haskell, ```n``` doesn't name something in the outside world (outside the language). It only bears the meaning of its _definition_ (```n = 1```) and nothing else.
+In Haskell, ```n``` doesn't name something in the outside world (outside the language). It only bears the meaning of its _definition_ (```n = 1```) and nothing else. In some real sense, there is no variable in Haskell, only named definitions.
 
+### A word of Python
 
+There is some sense in which to say that variables are immutable in Python. For example:
+
+```Python
+>>> n = 1
+>>> id(n)
+140736255455488
+>>> n += 1
+>>> id(n)
+140736255455520
+```
+In the previous example, we can see that the "id" of the variable underneath its name is not the same after having been modified. So, in some sense, they are immutable. But the name ```n``` does change its meaning. Therefore we have the same problem as in _C_ with side-effets. For example: 
+
+```Python
+>>> def inc_n_by_side_effect():
+...     global n
+...     n += 1
+...     return n
+...
+>>> n = 1
+>>> n = inc_n_by_side_effect() * n
+>>> n
+4
+>>> n=1
+>>> n = n * inc_n_by_side_effect()
+>>> n
+2
+>>>
+```
+
+Variables are immutable in Python in the sense that you can't modify the area of memory ("outside the language") where their values are set, not in the sense that you can't change its definition.
