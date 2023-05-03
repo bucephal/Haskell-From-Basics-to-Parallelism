@@ -54,3 +54,5 @@ aaa
 ## Functions' Body in Haskell
 
 aaaa
+
+(Next: Laziness)
