@@ -13,7 +13,7 @@ Categories: Haskell Functional-Programming referential-transparency declarative-
 >
 >_Through the Looking Glass_, Lewis Carroll
 
-# Syntax for Defining Functions
+# Defining Functions
 
 The identity function may be the simplest one. It taskes an “x” and simply returns that “x”.
 
@@ -24,3 +24,33 @@ identity "hello"
 ```
 
 The name of a function like "identity" must start with a lower case letter. Then comes its parameters' list followed by an "=" and an expression for its value or result. 
+
+## Multiple parameters
+
+aaa
+
+## Partial applications and closures
+
+aaa
+
+## Lambda Functions
+
+aaa
+
+## A First Taste of Types
+
+### Basic types
+
+### Lists
+
+### Tuples
+
+### Functions
+
+## Currying
+
+aaa
+
+## Functions' Body in Haskell
+
+aaaa
