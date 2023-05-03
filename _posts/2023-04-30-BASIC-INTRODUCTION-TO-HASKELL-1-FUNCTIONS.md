@@ -6,7 +6,7 @@ Categories: Haskell Functional-Programming referential-transparency declarative-
 ---
 ![Function Closed Machine](https://bucephal.github.io/learn_Haskell/docs/assets/images/Function_machine2.svg)
 
-# Well... Functions!
+# Well... Functions! Pure Functions!
 
 A function is a kind of machine that takes one or more parameters and produces a result, one result, only one result, and always one result. As you can see in the image above, a function is represented as a box with only one entry. This means that a function can't be influenced by anything other than the designed entry door. There can be more than one entry, but no backdoor. Therefore, for a given parameter, the function must always produce the _same_ result, since there can't be any source of effect other than its declared parameters. This important property is named **_referential transparency_**. A function is pure internal logic. A closed box. What it means to be pure logic may be nothing more than a fantasy of early 20<sup>th</sup> century mathematicians. But that is a question for the philosophers to answer. As far as we are concerned, it simply means that if you give the machine the same input, it will produce the same output. Every time.
 
@@ -25,11 +25,11 @@ Functions in Haskell can only be defined and nothing else can be said about them
 
 If this property of referential transparency is respected all the way throughout the language then the language is said to be **_pure_**. You might wonder what the point of having a genuine pure language is, since it rules out any form of I/O. As a matter of fact I/O can't guarantee the same result all the time. So it would seem that a pure FP (Functional Programming) language is useless. No matter how smart it may be inside, if you can't communicate with it... no one really knows!
 
-Have no fear, this problem has been taken care of. But we won't be able to explain it all we see those (in)famous **_monads_** (Nevertheless, we will be using I/O constructs throughout, but the actual explanations will come at a later stage.)
+Have no fear! This problem has been taken care of. But we won't be able to explain it all until we see those (in)famous **_monads_** (Nevertheless, we will be using I/O constructs throughout, but the actual explanations will come at a later stage.)
 
-According to Simon Peyton-Jones, the main person behind Haskell, the language is actually useless. The more pure it is, the less useful it will be. The first versions of Haskell had no form of I/O, but after a while it became embarrassing... 
+According to Simon Peyton-Jones, one of the main characters behind Haskell, the language is actually useless. The more pure it is, the less useful it will be. The first versions of Haskell had no form of I/O whatsoever, but after a while it became embarrassing... 
 
-## Order of Evaluation is Irrelevant
+## Evaluation Order is Irrelevant
 
 A function in Haskell is defined in such a way that their order of evaluation is immaterial. That means that no matter in what order the expressions are evaluated, the result will be the same.
 This property of functions in Haskell comes from their purity. Most imperative languages can't insure this. For example, in _C_:
