@@ -23,7 +23,7 @@ f 4
 
 Functions in Haskell can only be defined and nothing else can be said about them. You simply define it, i.e. give it a meaning, nothing more. What steps the computer actually takes to calculate the result according to its parameters is not our concern. We only care about what it means to be the function (say) _f_, and this meaning is nothing but what should be the output for all its possible inputs.
 
-If this property of referential transparency is respected all the way throughout the language then the language is said to be **_pure_**. You might wonder what the point of having a genuine pure language is, since it rules out any form of I/O. As a matter of fact I/O can't guarantee the same result all the time. So it would seem that a pure FP (Functional Programming) language is useless. No matter how smart it may be inside, if you can't communicate with it... no one really knows!
+If this property of referential transparency is respected all the way throughout the language then it is said to be **_pure_**. You might wonder what the point of having a genuine pure language is, since it rules out any form of I/O. As a matter of fact I/O can't guarantee the same result all the time. So it would seem that a pure FP (Functional Programming) language is useless. No matter how smart it may be inside, if you can't communicate with it... no one really knows!
 
 Have no fear! This problem has been taken care of. But we won't be able to explain it all until we see those (in)famous **_monads_** (Nevertheless, we will be using I/O constructs throughout, but the actual explanations will come at a later stage.)
 
@@ -31,8 +31,7 @@ According to Simon Peyton-Jones, one of the main characters behind Haskell, the 
 
 ## Evaluation Order is Irrelevant
 
-A function in Haskell is defined in such a way that their order of evaluation is immaterial. That means that no matter in what order the expressions are evaluated, the result will be the same.
-This property of functions in Haskell comes from their purity. Most imperative languages can't insure this. For example, in _C_:
+A function in Haskell is defined in such a way that the order in which they are evaluated does not matter. This means that the result will be the same regardless of the order in which the expressions are evaluated. This property of the functions in Haskell is due to their purity. Most imperative languages can't guarantee this. For example, in _C_:
 
 ```C
 int n = 1;
@@ -46,29 +45,29 @@ n = ++n * n
 // Here n is 4
 ```
 
-Although the multiplication is commutative both in the _C_ language and in mathematics, and although we have the exact same operands (```++n``` and ```n```), still we don't have the same results.
-This is due to side-effects. In _C_, ```n``` is not only a name, it's a variable, i.e. an area into the actual computer memory (let's say a "bucket"). 
+Even though multiplication is commutative in both language and mathematics, and even though we have exactly the same operands (```++n``` and ```n```), we don't have the same results.
+This is due to side effects. In _C_, ```n``` is not only a name, it's a variable, i.e. an area into the actual computer memory (let's say a "bucket"). 
 
-In the first case, these steps are undertaken:
-1. Evaluate ```n``` : Go take what's in the ```n``` bucket (i.e. 1 to begin with);
-2. Evaluate ```++n``` : This does three things:
-    2.1. Go take what's in the ```n``` bucket (i.e. 1 again);
+In the first case, these steps are taken:
+1. Evaluate ```n``` (first argument): Take what's in the ```n``` bucket (i.e. 1 to begin with);
+2. Evaluate ```++n``` (second argument): This does three things:
+    2.1. Take what's in the ```n``` bucket (i.e. 1 again);
     2.2. Increment that value so that it becomes 2.
     2.1. Put the new value (2) into the same bucket.
-3. Evaluate 1 * 2: which results is 2.
-4. Put back the new value 2 into the bucket.
+3. Evaluate 1 * 2: the result is 2.
+4. Put the new value 2 back into the bucket.
 
-In the second case, these steps are undertaken:
-1. Evaluate ```++n``` : This does three things:
-    1.1. Go take what's in the ```n``` bucket (i.e. 1 to begin with);
+In the second case, these steps are taken:
+1. Evaluate ```++n`` (first argument). This does three things:
+    1.1. Take what's in the ```n``` bucket (i.e. 1 to begin with);
     1.2. Increment that value so that it becomes 2.
     1.3. Put the new value (2) into the same bucket.
-2. Evaluate ```n``` : Go take what's in the ```n``` bucket (i.e. 2);
+2. Evaluate ```n``` (second argument): Go take what's in the ```n``` bucket (i.e. 2);
 3. Evaluate 2 * 2: which result is 4.
-4. Put back the new value 4 into the bucket.
+4. Put the new value 4 back into the bucket.
 
-The origin of sin is referencing something that changes. In Haskell, nothing change and therefore expression may be evaluated in any order.
-This small _C_ example code can't be replicated in Haskell. We would rather get something like this.
+The origin of sin is that it refers to something that does change along the process. In Haskell, nothing change and therefore expression may be evaluated in any order.
+The previous small _C_ code snippet can't be replicated in Haskell. This is as close as we can get.
 
 ```Haskell
 n = 1
@@ -88,7 +87,7 @@ In Haskell, ```n``` doesn't name something in the outside world (outside the lan
 
 ### A word of Python
 
-There is some sense in which to say that variables are immutable in Python. For example:
+There is a sense in which it can be said that ariables are immutable in Python. For example:
 
 ```Python
 >>> n = 1
@@ -103,7 +102,7 @@ In the previous example, we can see that the "id" of the variable underneath its
 ```Python
 >>> def inc_n_by_side_effect():
 ...     global n
-...     n += 1
+...     n += 1 ## Here the name "n" changes its "id" both inside the function and outside it.
 ...     return n
 ...
 >>> n = 1
@@ -117,4 +116,4 @@ In the previous example, we can see that the "id" of the variable underneath its
 >>>
 ```
 
-Variables are immutable in Python in the sense that you can't modify the area of memory where their values are set, not in the sense that you can't change its definition.
+Variables are immutable in Python in the sense that you can't modify the area of memory where their values are stored, not in the sense that you can't change its definition. Maybe if you forbid the keyword ```global```, it would improve things a bit to make Python a __pure__ FP. But then, lists, dictionnaries, sets, objects and even classes are still mutable. And there is no clear separation between I/O and the rest.
