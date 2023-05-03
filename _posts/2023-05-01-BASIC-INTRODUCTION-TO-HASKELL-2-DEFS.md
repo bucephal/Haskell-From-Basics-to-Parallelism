@@ -56,3 +56,9 @@ aaa
 aaaa
 
 (Next: Laziness)
+(Next: Types)
+(Then Context: Maybe and IO)
+(Then functors, Applicatives and Monads)
+(IO Revisited)
+(Then introduction to the problem we will tackle to test parallelism: Neuron nets both training and using)
+(Then the par and seq primitives)
