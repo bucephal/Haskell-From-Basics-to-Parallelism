@@ -121,7 +121,7 @@ Int -> Int
 
 Likewise, the first ```Int ->``` disappeared and only the right part remains, which is ```Int -> Int```. It's exactly the same operation of binding a parameter in both cases, ```ord``` and ```add```. But here, the remaining ```Int -> Int``` is itself the type of function! 
 
-Does it mean that ```add``` is a function that takes one parameter of type ```Int``` and "returns" another function of type ```Int -> Int``` that is a closure of itself? That's exactly it. This is what "Currying" is all about.
+Does it mean that ```add``` is a function that takes one parameter of type ```Int``` and "returns" another function of type ```Int -> Int``` that is a closure of itself? That's exactly it. This is what "Currying" is all about as we will see later.
 
 ### Basic types
 
