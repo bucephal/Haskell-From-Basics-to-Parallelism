@@ -92,6 +92,8 @@ inc n = n+1
 
 ### Polymorphic types
 
+### Parametric types
+
 ### Lists
 
 ### Tuples
@@ -128,6 +130,7 @@ aaa
 aaaa
 
 (Next: Laziness)
+(Next: Introducing your Own Types)
 (Then Context: Maybe and IO)
 (Then functors, Applicatives and Monads)
 (IO Revisited)
