@@ -74,14 +74,16 @@ f 2 3
 
 ## A First Taste of Types
 
-In Haskell, to define the type of something (anything), you have to provide its name, followed the symbol ```::```, and then its actual type.
+Types don't absolutely need to be specified in Haskell. For proof, we already defined a few functions without specifying any type. They are _statically_ inferred when not specified according to its usage. This is not to be compared with dynamic typing as is done in _Python_. In Python, the type of a variable, of a tuple, of a list or a function (etc.) is determined at runtime according to its usage. The name of variable for example may change both its value and its type in the same scope. In Haskell, the type of a function is determined statically (at compile-time) and _must_ be coherent through the program specification. Nothing ever change in Haskell once defined. The type system superposes itself over the rest of the language to help in checking its correctness.
+
+The syntax to declare the type of something (anything) in Haskell is always the same: you have to provide its name, followed the symbol ```::```, and its actual type.
 
 ```Haskell
 n :: Int
 n = 3
 ```
 
-A function's type is defined with ```TypeParam -> TypeResult```.
+The type of a function is defined with the arrow ```TypeParam -> TypeResult```.
 
 ```Haskell
 ord :: Int -> Char
@@ -89,15 +91,17 @@ ord 1 = 'a'
 ord 2 = 'b'
 ord _ = '!'
 
-my_letter = inc 2
+my_letter = ord 2
 
 :t my_letter
 Char
 ```
 
-Applying a one-parameter function or binding its parameter to a value means the same thing. After applying an ```Int``` to a function ```Int -> Char```, the result is very naturally a ```Char```. Let's see a function with two parameters.
+Applying a one-parameter function or binding its parameter to a value means the same thing. After applying an ```Int``` to a function ```Int -> Char```, the result is very naturally a ```Char```.
 
-For example, the type of a function that  adds two integers will be ```Int -> Int -> Int```. The first time you see this, you deduce that the first two ```Int``` are for the parameters and the the last one is for the result. But it's kind of shocking to see no clear separation between the parameters and the "return" type. Considering that there is always no more and no less than one result, you might think that indeed there is no need for anything more. Mmmmh, but there is more to think about it. First let's see the example.
+Now, let's see a function with two parameters.
+
+For example, the type of a function that  adds two integers will be ```Int -> Int -> Int```. The first time you see this, you deduce that the first two ```Int``` are for the parameters and the the last one is for the result. But it's kind of shocking to see no clear separation between the parameters and the "return" type. But then, considering that there can't be no more and no less but one result, you might think that indeed there is no need for anything more. Mmmmh, but there is more to think about. First let's see the example of ```add```.
 
 ```Haskell
 add :: Int -> Int -> Int
@@ -110,7 +114,10 @@ When we binded the parameter of the ```ord``` function above, the ```Int ->``` d
 
 ```Haskell
 add :: Int -> Int -> Int
-add' = add 2 -- add' is a closure of add
+
+-- Binding the first parameter of add
+-- gives the closure add'
+add' = add 2
 
 add' 3
 5
