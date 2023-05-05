@@ -119,7 +119,7 @@ add' 3
 Int -> Int
 ```
 
-When we bind the first ```Int``` of a function ```Int -> Int -> Int```, then in a similar way as for ```ord```, only the right part remains, which is ```Int -> Int``` in the case of ```add```. It's exactly the same operation of binding a parameter in both cases, ```ord``` and ```add```. The (first) parameter disappear. But, the remaining ```Int -> Int``` of the ```add'``` function is itself the type of function! 
+Likewise, the first ```Int ->``` disappeared and only the right part remains, which is ```Int -> Int```. It's exactly the same operation of binding a parameter in both cases, ```ord``` and ```add```. But here, the remaining ```Int -> Int``` is itself the type of function! 
 
 Does it mean that ```add``` is a function that takes one parameter of type ```Int``` and "returns" another function of type ```Int -> Int``` that is a closure of itself? That's exactly it. This is what "Currying" is all about.
 
