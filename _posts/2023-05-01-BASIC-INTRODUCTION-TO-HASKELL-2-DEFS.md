@@ -28,7 +28,7 @@ identity 2
 
 The name of a function like "identity" must start with a lower case letter. Then comes its parameters' list followed by an "=" and an expression for its value or result. 
 
-## Multiple parameters
+## Function parameters
 
 Strictly speaking, a function has only one parameter. It may be a multi-dimensional parameter (a tuple) but it is only one "thing". But for practical purposes, it is possible to think about it as multiple parameters. In Haskell, parameters are simply separated by white spaces. There is a reason for this and its related to the fact that Haskell really doesn't accept more than one parameter as we will see in the section about "Currying".
 
