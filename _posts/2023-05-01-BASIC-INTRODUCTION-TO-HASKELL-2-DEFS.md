@@ -47,9 +47,17 @@ g = f 2
 g 3
 5
 ```
-The parameter ```y``` of the function ```f``` is not free anymore in function ```g```. It has been binded to ```2```, leaving the parameter ```x``` free. That's one way to make new functions out of existing ones. The function ```g``` is called a **_closure_** of ```f```. In some sense, it _captured_ a ```2``` inside. It's a function with a parameter forever binded to a fix value. We will give another definition in section about currying.
+The parameter ```y``` of the function ```f``` is not free anymore in function ```g```. It has been binded to ```2```, leaving the parameter ```x``` free. That's one way to make new functions out of existing ones. The function ```g``` is called a **_closure_** of ```f```. In some sense, it _captured_ a ```2``` inside. It's simply a function with a parameter forever binded to a fix value. We will give another definition in the section about currying.
 
-We may push a little further and consider litterals, for example
+We may push a little further and consider litterals (like 2, "hello", 'L', etc.) as closures on the identity function. Let's say that we define the ```id``` function like this.
+
+```Haskell
+id n = n
+id 2
+2
+```
+
+We may say that ```2``` _is_ a closure on the function ```id``` binded to ```2```...
 
 ## Lambda Functions
 
