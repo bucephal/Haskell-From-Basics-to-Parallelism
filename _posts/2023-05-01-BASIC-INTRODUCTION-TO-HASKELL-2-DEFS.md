@@ -95,7 +95,33 @@ my_letter = inc 2
 Char
 ```
 
-Applying a one-parameter function or binding its parameter to a value means the same thing. After applying an ```Int``` to a function ```Int -> Char```, the result is very naturally a ```Char```.
+Applying a one-parameter function or binding its parameter to a value means the same thing. After applying an ```Int``` to a function ```Int -> Char```, the result is very naturally a ```Char```. Let's see a function with two parameters.
+
+For example, the type of a function that  adds two integers will be ```Int -> Int -> Int```. The first time you see this, you deduce that the first two ```Int``` are for the parameters and the the last one is for the result. But it's kind of shocking to see no clear separation between the parameters and the "return" type. Considering that there is always no more and no less than one result, you might think that indeed there is no need for anything more. Mmmmh, but there is more to think about it. First let's see the example.
+
+```Haskell
+add :: Int -> Int -> Int
+add n m = n + m
+add 2 3
+5
+```
+
+When we binded the parameter of the ```ord``` function above, the ```Int ->``` disappeared and only ```Char``` remained. Let's now bind the first parameter of ```add```.
+
+```Haskell
+add :: Int -> Int -> Int
+add' = add 2 -- add' is a closure of add
+
+add' 3
+5
+
+:t add'
+Int -> Int
+```
+
+When we bind the first ```Int``` of a function ```Int -> Int -> Int```, then in a similar way as for ```ord```, only the right part remains, which is ```Int -> Int``` in the case of ```add```. It's exactly the same operation of binding a parameter in both cases, ```ord``` and ```add```. The (first) parameter disappear. But, the remaining ```Int -> Int``` of the ```add'``` function is itself the type of function! 
+
+Does it mean that ```add``` is a function that takes one parameter of type ```Int``` and "returns" another function of type ```Int -> Int``` that is a closure of itself? That's exactly it. This is what "Currying" is all about.
 
 ### Basic types
 
