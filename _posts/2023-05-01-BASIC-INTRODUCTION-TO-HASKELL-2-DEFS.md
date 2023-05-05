@@ -42,7 +42,7 @@ The ```f``` can be seen as a function with two parameters ```x``` and ```y```.
 
 ## Partial applications and closures
 
-It is possible to partially apply the function.
+It is possible to partially apply a function.
 
 ```Haskell
 f x y = x + y
