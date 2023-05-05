@@ -110,18 +110,24 @@ If we define litteral as closures on function (see previous section) and if we d
 
 ## Functions' Body in Haskell
 
-aaaa
+### Pattern matching
+### Guards
+### If Then Else Constructs
+### Where Clauses
 
 ## Recursivity
 
 aaaa
+
+## Type Classes
+
+aaa
 
 ## Higher Order Functions
 
 aaaa
 
 (Next: Laziness)
-(Next: Types)
 (Then Context: Maybe and IO)
 (Then functors, Applicatives and Monads)
 (IO Revisited)
