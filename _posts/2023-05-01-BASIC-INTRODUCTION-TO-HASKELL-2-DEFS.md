@@ -81,6 +81,14 @@ aaa
 
 aaaa
 
+## Recursivity
+
+aaaa
+
+## Higher Order Functions
+
+aaaa
+
 (Next: Laziness)
 (Next: Types)
 (Then Context: Maybe and IO)
