@@ -84,9 +84,18 @@ n = 3
 A function's type is defined with ```TypeParam -> TypeResult```.
 
 ```Haskell
-inc :: Int -> Int
-inc n = n+1
+ord :: Int -> Char
+ord 1 = 'a'
+ord 2 = 'b'
+ord _ = '!'
+
+my_letter = inc 2
+
+:t my_letter
+Char
 ```
+
+Applying a one-parameter function or binding its parameter to a value means the same thing. After applying an ```Int``` to a function ```Int -> Char```, the result is very naturally a ```Char```.
 
 ### Basic types
 
