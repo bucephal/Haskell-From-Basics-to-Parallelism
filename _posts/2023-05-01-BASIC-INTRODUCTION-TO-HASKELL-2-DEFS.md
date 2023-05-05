@@ -74,13 +74,27 @@ f 2 3
 
 ## A First Taste of Types
 
+In Haskell, to define the type of something (anything), you have to provide its name, followed the symbol ```::```, and then its actual type.
+
+```Haskell
+n :: Int
+n = 3
+```
+
+A function's type is defined with ```TypeParam -> TypeResult```.
+
+```Haskell
+inc :: Int -> Int
+inc n = n+1
+```
+
 ### Basic types
+
+### Polymorphic types
 
 ### Lists
 
 ### Tuples
-
-### Functions
 
 ## Currying
 
