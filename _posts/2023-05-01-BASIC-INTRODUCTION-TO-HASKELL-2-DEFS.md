@@ -58,12 +58,19 @@ We may say that ```2``` _is_ a closure on the function ```identity``` binded to 
 
 ## Lambda Functions
 
-If you want to know when the "λ" is coming from, see the first section of the first post of this serie. Most programming languages have a notion of "anonymous function", i.e. a function without a name. Everywhere we call this a "_lambda function_". Likewise, in Haskell, a lambda function is a function with no name. This is useful because functions in Haskell are _first-class citizens_. A function may return another function as value or accept another function for parameter. To be "pure" we shouldn't say "return" because functions in pure FP don't _do_ things, like returning a value, functions are only _definitions_. There is a notion of "returning" something in Haskell, but it makes sense only in the context of IO (or something with a state). So to be "pure", we'll say that an anonymous function is useful because functions are defined with functions. This will be obvious after we see "higher order functions" and currying.
+Most programming languages have a notion of "anonymous function", i.e. a function without a name. The concept of an anonymous function comes from FP. Likewise, in Haskell, a lambda function is a function with no name.
 
+Why is it useful? It is useful in a language where functions are to be considered as _first-class citizens_. For example, a function may return another function as value or accept another function for parameter. 
 
-So here's an example of a lambda function in Haskell. without a name in Haskell is 
+Note that to be "pure" we shouldn't say "return" because functions in pure FP don't _do_ things, like returning a value. Functions are nothing more than _definitions_ in pure FP. If there _is_ a notion of "returning" something in Haskell, it only makes sense in the context of IO (or something with a state). So to be "pure", we'll say that an anonymous function is useful because functions are defined with functions. This will become obvious as we proceed.
 
+So here's an example of a lambda function in Haskell. 
 
+```Haskell
+f = \x y -> x + y
+f 2 3
+5
+```
 
 ## A First Taste of Types
 
