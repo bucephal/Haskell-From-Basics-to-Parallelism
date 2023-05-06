@@ -4,7 +4,7 @@ title: "Basic Introduction to Haskell 1. Functions"
 date: 2023-04-30
 Categories: Haskell Functional-Programming referential-transparency declarative-language imperative-language pure-functional-language
 ---
-![Function Closed Machine](https://bucephal.github.io/Haskell-From-Basics_to-Parallelism/docs/assets/images/Function_machine2.svg)
+![Function Closed Machine](https://bucephal.github.io/Haskell-From-Basics-to-Parallelism/docs/assets/images/Function_machine2.svg)
 
 # A Greek Letter: λ
 
