@@ -5,7 +5,7 @@ date: 2023-05-01
 Categories: Haskell Functional-Programming referential-transparency declarative-language imperative-language pure-functional-language
 ---
 
-![Function Closed Machine](https://bucephal.github.io/learn_Haskell/docs/assets/images/humpty_dumpty.jpg)
+![Function Closed Machine](https://bucephal.github.io/Haskell-From-Basics-to-Parallelism/docs/assets/images/humpty_dumpty.jpg)
 
 >“The question is,” said Alice, “whether you can make words mean so many different things.”
 >
